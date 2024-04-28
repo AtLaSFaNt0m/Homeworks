@@ -7,7 +7,7 @@ print_params(c=[1, 2, 3])
 
 
 value_list = [4, 2, 3]
-values_dict = {'a': 132, 'b': 'String', 'c': True}
+values_dict = {'a': 132, 'b': 'Aboba', 'c': False}
 
 
 print_params(*value_list)
