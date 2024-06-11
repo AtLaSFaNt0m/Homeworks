@@ -1,29 +1,27 @@
+class Vehicle:
+    def __init__(self):
+        self.vehicle_type = "none"
+
 class Car:
-    price = 1000000
+    def __init__(self):
+        self.price = 1000000
 
     def horse_powers(self):
         return "Количество лошадиных сил для автомобиля не указано"
 
-
-class Nissan(Car):
-    price = 1200000
+class Nissan(Car, Vehicle):
+    def __init__(self):
+        Car.__init__(self)
+        Vehicle.__init__(self)
+        self.price = 1200000
+        self.vehicle_type = "car"
 
     def horse_powers(self):
         return 200
 
 
-class Kia(Car):
-    price = 900000
-
-    def horse_powers(self):
-        return 150
-
-
 nissan_car = Nissan()
-kia_car = Kia()
 
-print(f"Nissan цена: {nissan_car.price}")
-print(f"Nissan лошадиные силы: {nissan_car.horse_powers()}")
 
-print(f"Kia цена: {kia_car.price}")
-print(f"Kia лошадиные силы: {kia_car.horse_powers()}")
+print(nissan_car.vehicle_type)
+print(nissan_car.price)
