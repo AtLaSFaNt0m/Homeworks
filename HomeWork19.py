@@ -39,7 +39,6 @@ class Sedan(Vehicle):
         return self.__PASSENGERS_LIMIT
 
 
-# Пример использования
 vehicle = Vehicle("Alice", "Toyota", 150, "Red")
 vehicle.print_info()
 vehicle.set_color("Blue")
