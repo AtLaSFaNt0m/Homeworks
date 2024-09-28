@@ -5,7 +5,7 @@ from aiogram.dispatcher import FSMContext
 from aiogram.dispatcher import states
 from aiogram.utils import executor
 
-API_TOKEN = 'YOUR_API_TOKEN_HERE'
+API_TOKEN = 'none'
 logging.basicConfig(level=logging.INFO)
 
 bot = Bot(token=API_TOKEN)
