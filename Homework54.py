@@ -8,7 +8,7 @@ from aiogram.dispatcher import FSMContext
 from aiogram.utils import executor
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMarkup, InlineKeyboardButton
 
-API_TOKEN = '7930411514:AAEi1PskqlhKffakz4a6Za-Q8dqSfOfSfFU'
+API_TOKEN = 'none'
 
 logging.basicConfig(level=logging.INFO)
 
