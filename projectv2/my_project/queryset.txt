@@ -1,0 +1,24 @@
+# Импорт моделей
+from task1.models import Buyer, Game
+
+# Создание записей Buyer
+buyer1 = Buyer.objects.create(name="Alice", balance=100.00, age=25)
+buyer2 = Buyer.objects.create(name="Bob", balance=50.00, age=30)
+buyer3 = Buyer.objects.create(name="Charlie", balance=75.00, age=16)  # младше 18
+
+# Создание записей Game
+game1 = Game.objects.create(title="Game One", cost=20.00, size=1.5, description="First game", age_limited=True)
+game2 = Game.objects.create(title="Game Two", cost=30.00, size=2.0, description="Second game", age_limited=True)
+game3 = Game.objects.create(title="Game Three", cost=10.00, size=0.5, description="Third game", age_limited=False)  # без возрастного ограничения
+
+# Связывание покупателей с играми
+# Первый покупатель (Alice) будет обладать всеми играми
+game1.buyers.set([buyer1])
+game2.buyers.set([buyer1])
+game3.buyers.set([buyer1])
+
+# Второй покупатель (Bob) получит только игру без возрастного ограничения
+game3.buyers.add(buyer2)
+
+# Третий покупатель (Charlie) также получит только игру без возрастного ограничения
+game3.buyers.add(buyer3)
